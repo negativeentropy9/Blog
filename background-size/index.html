@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background-size</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .wrapper {
+            padding-left: 40px;
+        }
+
+        .item {
+            background-image: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=423683520,1100055728&fm=15&gp=0.jpg);
+            background-repeat: no-repeat;
+
+            width: 100px;
+            height: 100px;
+
+            margin-top: 20px;
+        }
+
+        .auto {
+            background-size: auto;
+        }
+
+        .cover {
+            background-size: cover;
+        }
+
+        .contain {
+            background-size: contain;
+        }
+
+        .percent100auto {
+            background-size: 100% auto;
+        }
+
+        .autopercent100 {
+            background-size: auto 100%;
+        }
+
+        .percent100percent100 {
+            background-size: 100% 100%;
+        }
+
+        .img img {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>background-size 讲解</h1>
+        <h2>原图</h2>
+        <div class="img">
+            <img src="http://doudou-space.qiniudn.com/background.png" alt="">
+        </div>
+        <ul>
+            <li class="item auto">auto</li>
+            <li class="item cover">cover</li>
+            <li class="item contain">contain</li>
+            <li class="item percent100auto">100% auto</li>
+            <li class="item autopercent100">auto 100%</li>
+            <li class="item percent100percent100">100% 100%</li>
+        </ul>
+    </div>
+</body>
+</html>
