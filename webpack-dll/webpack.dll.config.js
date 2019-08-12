@@ -2,6 +2,7 @@ const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,13 +11,14 @@ module.exports = {
   },
   output: {
     path: path.resolve('dist'),
-    filename: '[name]-[hash].js',
-    library: '[name]_[hash]'
+    filename: '[name].js',
+    library: '[name]'
   },
   plugins: [
+  new CleanWebpackPlugin(),
     new webpack.DllPlugin({
-      path: path.resolve('[name]-manifest.json'),
-      name: '[name]_[hash]'
+      path: path.resolve('./dll/[name]-manifest.json'),
+      name: '[name]'
     })
   ]
 }

@@ -2,9 +2,8 @@ const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const manifest = require('./vendor-manifest.json');
+const manifest = require('./dll/vendor-manifest.json');
 
 module.exports = {
   mode: 'development',
@@ -24,7 +23,6 @@ module.exports = {
   },
   plugins: [
     new webpack.ProgressPlugin(),
-    new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
     new htmlWebpackPlugin({
       title: 'index',
