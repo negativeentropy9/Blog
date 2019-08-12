@@ -11,3 +11,4 @@
 ## 2019.08
 
 - [react 中 debounce 的使用](https://github.com/doudounannan/Blog/issues/15)
+- [React.PureComponent 使用](https://github.com/doudounannan/Blog/issues/16)

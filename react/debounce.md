@@ -119,3 +119,5 @@ class ComponentChild2 extends React.Component {
 - state 修改 导致 render 渲染
 
 ## 总结
+
+- 使用 debounce 尽量使用 class 类组件 在 componentDidMount 这个生命周期里面初始化
