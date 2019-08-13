@@ -15,7 +15,7 @@
 
 详见下面的代码
 
-[codepen demo](https://codesandbox.io/s/purecomponent-lzeyn)
+[codesandbox demo](https://codesandbox.io/s/purecomponent-lzeyn)
 
 ### 测试效果
 
