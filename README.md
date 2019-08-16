@@ -14,3 +14,4 @@
 - [React.PureComponent 使用](https://github.com/doudounannan/Blog/issues/16)
 - [React 中的事件](https://github.com/doudounannan/Blog/issues/17)
 - [React 中的 setState 用法](https://github.com/doudounannan/Blog/issues/18)
+- [promise 中 then 的 onRejected vs catch](https://github.com/doudounannan/Blog/issues/19)
