@@ -1,6 +1,6 @@
 # Blog
 
-## 2018.9
+## 2018.09
 
 - [sentry 搭建](https://github.com/doudounannan/Blog/issues/4)
 
@@ -17,3 +17,4 @@
 - [promise 中 then 的 onRejected vs catch](https://github.com/doudounannan/Blog/issues/19)
 - [js 中的箭头函数](https://github.com/doudounannan/Blog/issues/20)
 - [js 中多重继承的实现](https://github.com/doudounannan/Blog/issues/21)
+- [ECMA2015 promise 实现](https://github.com/doudounannan/Blog/issues/22)
