@@ -18,3 +18,4 @@
 - [js 中的箭头函数](https://github.com/doudounannan/Blog/issues/20)
 - [js 中多重继承的实现](https://github.com/doudounannan/Blog/issues/21)
 - [ECMA2015 promise 实现](https://github.com/doudounannan/Blog/issues/22)
+- [react 中 hooks 依赖项比较策略](https://github.com/doudounannan/Blog/issues/23)
