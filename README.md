@@ -19,3 +19,4 @@
 - [js 中多重继承的实现](https://github.com/doudounannan/Blog/issues/21)
 - [ECMA2015 promise 实现](https://github.com/doudounannan/Blog/issues/22)
 - [react 中 hooks 依赖项比较策略](https://github.com/doudounannan/Blog/issues/23)
+- [js 阻止对象可被扩展 Object.freeze vs Object.seal vs Object.preventExtensions](https://github.com/doudounannan/Blog/issues/24)
