@@ -1,8 +1,8 @@
-# ECMA2015 promise 实现
+# ECMA2015 promise
 
 ## api
 
-### then
+### Promise.prototype.then
 
 #### 参数不合理
 
@@ -47,6 +47,35 @@ Promise.reject('reject').catch((e) => {
     console.log('debug-then-e', e);
 })
 ```
+
+### Promise.prototype.all
+
+> 如果参数中  promise 有一个失败（rejected），此实例回调失败（reject），失败原因的是第一个失败 promise 的结果。
+
+```js
+var t1 = new Promise((resolve,reject)=>{
+  console.log('debug-t1');
+    setTimeout(() => reject("t1-error"), 2000)
+})
+var t2 = new Promise((resolve,reject)=>{
+  console.log('debug-t2');
+    setTimeout(() => resolve("t2-success"), 1000)
+})
+var t3 =new Promise((resolve,reject)=>{
+  console.log('debug-t3');
+    setTimeout(() => reject("t3-error"), 500)
+})
+Promise.all([t1,t2,t3]).then(res=>{
+    console.log(res)
+}).catch(error=>{
+    console.log(error)
+})
+// 打印出来是t3-error
+```
+
+### Promise.prototype.race
+
+> Promise.race(iterable) 方法返回一个 promise，一旦迭代器中的某个promise解决或拒绝，返回的 promise就会解决或拒绝。
 
 ## 参考
 

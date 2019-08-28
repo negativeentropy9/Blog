@@ -17,6 +17,6 @@
 - [promise 中 then 的 onRejected vs catch](https://github.com/doudounannan/Blog/issues/19)
 - [js 中的箭头函数](https://github.com/doudounannan/Blog/issues/20)
 - [js 中多重继承的实现](https://github.com/doudounannan/Blog/issues/21)
-- [ECMA2015 promise 实现](https://github.com/doudounannan/Blog/issues/22)
+- [ECMA2015 promise](https://github.com/doudounannan/Blog/issues/22)
 - [react 中 hooks 依赖项比较策略](https://github.com/doudounannan/Blog/issues/23)
 - [js 阻止对象可被扩展 Object.freeze vs Object.seal vs Object.preventExtensions](https://github.com/doudounannan/Blog/issues/24)
