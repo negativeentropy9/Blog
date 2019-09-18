@@ -20,4 +20,8 @@
 - [ECMA2015 promise](https://github.com/doudounannan/Blog/issues/22)
 - [react 中 hooks 依赖项比较策略](https://github.com/doudounannan/Blog/issues/23)
 - [js 阻止对象可被扩展 Object.freeze vs Object.seal vs Object.preventExtensions](https://github.com/doudounannan/Blog/issues/24)
-- [reselect 源码解读](https://github.com/doudounannan/Blog/issues/25)
+
+## 2019.09
+
+- [Scroll Restoration Spec](https://github.com/doudounannan/Blog/issues/25)
+- [reselect 源码解读](https://github.com/doudounannan/Blog/issues/26)
