@@ -27,4 +27,5 @@
 
 ## 2019.10
 
-- [antd 设计思想(Button 组件举例)])(https://github.com/doudounannan/Blog/issues/27)
+- [【译】React Redux API Hooks](https://github.com/doudounannan/Blog/issues/27)
+- [antd 设计思想(Button 组件举例)](https://github.com/doudounannan/Blog/issues/28)
