@@ -28,4 +28,8 @@
 ## 2019.10
 
 - [【译】React Redux API Hooks](https://github.com/doudounannan/Blog/issues/27)
-- [antd 组件库设计之 button 组件 分析)](https://github.com/doudounannan/Blog/issues/28)
+- [antd 组件库设计之 button 组件 分析](https://github.com/doudounannan/Blog/issues/28)
+
+## 2020.01
+
+- [【译】Suspense for Data Fetching](https://github.com/doudounannan/Blog/issues/29)
