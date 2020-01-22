@@ -4,6 +4,36 @@
 
 ## `generator` 是什么？
 
+```js
+var promise1 = new Promise((resolve, reject) => {
+  console.log('debug-promise1-before-setTimeout');
+
+  setTimeout(() => {
+    console.log('debug-promise1-setTimeout');
+    resolve(1);
+  }, 100);
+});
+var promise2 = Promise.resolve(2);
+
+var arr = [promise1, promise2];
+
+// for (promise of arr) {
+//   promise.then((data) => console.log('debug-array', data))
+// }
+
+function* gen() {
+  yield promise1;
+  yield promise2;
+
+  return false;
+}
+
+var gen1 = gen();
+for (promise of gen1) {
+  promise.then(data => console.log('debug-generator', data));
+}
+```
+
 ## API
 
 ### next
