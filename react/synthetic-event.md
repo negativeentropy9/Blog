@@ -6,7 +6,7 @@
 
 ## 测试效果
 
-![synthetic-event](../imgs/react-synthetic-event.gif)
+![synthetic-event](/imgs/react-synthetic-event.gif)
 
 ## 总结
 

@@ -31,8 +31,7 @@ Object.assign(this.state, {
 });
 ```
 
-所以以上代码只加 1次
-
+所以以上代码只加 1 次
 
 ### setState((state, props) => stateChange[, callback])
 
@@ -45,7 +44,6 @@ this.setState(state => {
   };
 });
 
-
 this.setState(state => {
   return {
     counter: state.counter + 1
@@ -53,17 +51,17 @@ this.setState(state => {
 });
 ```
 
-以上代码会加2次
+以上代码会加 2 次
 
 ## 同步异步性
 
 ### 同步
 
-绕过React通过addEventListener直接添加的事件处理函数，还有通过setTimeout/setInterval产生的异步调用。
+绕过 React 通过 addEventListener 直接添加的事件处理函数，还有通过 setTimeout/setInterval 产生的异步调用。
 
 ### 异步
 
-> 在React的setState函数实现中，会根据一个变量isBatchingUpdates判断是直接更新this.state还是放到队列中回头再说，而isBatchingUpdates默认是false，也就表示setState会同步更新this.state，但是，有一个函数batchedUpdates，这个函数会把isBatchingUpdates修改为true，而当React在调用事件处理函数之前就会调用这个batchedUpdates，造成的后果，就是由React控制的事件处理过程setState不会同步更新this.state。
+> 在 React 的 setState 函数实现中，会根据一个变量 isBatchingUpdates 判断是直接更新 this.state 还是放到队列中回头再说，而 isBatchingUpdates 默认是 false，也就表示 setState 会同步更新 this.state，但是，有一个函数 batchedUpdates，这个函数会把 isBatchingUpdates 修改为 true，而当 React 在调用事件处理函数之前就会调用这个 batchedUpdates，造成的后果，就是由 React 控制的事件处理过程 setState 不会同步更新 this.state。
 
 由 `React` 引发的事件处理，比如说 `onClick`，都是异步的，即在 使用 `setState` 修改 过后立即访问 `state` 修改的变量仍不是最新值。
 
@@ -71,14 +69,14 @@ this.setState(state => {
 
 ### 测试效果
 
-![react-setState](../imgs/react-setState.gif)
+![react-setState](/imgs/react-setState.gif)
 
 #### 分析
 
-- 首先看 `componentDidMount` 生命周期里面，使用对象方式更新，发现 `count` 字段只被加了 1次，且是异步的；紧接着，后面有个 `setTimeout` 的异步回调，发现 `count` 字段被 同步 加了 2次；
-- 第一个按钮点击触发 `react` 事件，在更新 `state` 中使用 `update callback` 方式，异步加了3次；
-- 第二个按钮点击触发 `react` 事件，在更新 `state` 中使用 `object` 方式，异步被加了1次
-- 第三个按钮绑定了原生事件，发现 `count` 字段 被同步加了2次
+- 首先看 `componentDidMount` 生命周期里面，使用对象方式更新，发现 `count` 字段只被加了 1 次，且是异步的；紧接着，后面有个 `setTimeout` 的异步回调，发现 `count` 字段被 同步 加了 2 次；
+- 第一个按钮点击触发 `react` 事件，在更新 `state` 中使用 `update callback` 方式，异步加了 3 次；
+- 第二个按钮点击触发 `react` 事件，在更新 `state` 中使用 `object` 方式，异步被加了 1 次
+- 第三个按钮绑定了原生事件，发现 `count` 字段 被同步加了 2 次
 
 ## 总结
 

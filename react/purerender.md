@@ -4,7 +4,6 @@
 
 首先我们先提一个牛人[Sophie Alpert](https://github.com/sophiebits)(和[Dan Abramov](https://github.com/gaearon)一样多产，我的偶像~~~)，`PureComponent` 就是这位牛人加入的。
 
-
 ## 是什么？解决了什么？
 
 指定 [shallowEqual](https://github.com/facebook/fbjs/blob/c69904a511b900266935168223063dd8772dfc40/packages/fbjs/src/core/shallowEqual.js#L39) 为 `shouldComponentUpdate` 的对比函数，只做一层浅比较，以此避免无价值的父组件渲染导致子组件渲染。
@@ -19,10 +18,9 @@
 
 ### 测试效果
 
-![react pure component](../imgs/react-pure-component.gif)
+![react pure component](/imgs/react-pure-component.gif)
 
-当父组件改变 `age` 字段时，本身不依赖于 `age` 的 Child 组件不应该更新，可是我们的 `React.Component`  `shouldComponentUpdate` 默认返回值是 true，即默认更新，而 `React.PureComponent` 可以做到 屏蔽掉不依赖字段改变的 `rerender`
-
+当父组件改变 `age` 字段时，本身不依赖于 `age` 的 Child 组件不应该更新，可是我们的 `React.Component` `shouldComponentUpdate` 默认返回值是 true，即默认更新，而 `React.PureComponent` 可以做到 屏蔽掉不依赖字段改变的 `rerender`
 
 ## 总结
 

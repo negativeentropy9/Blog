@@ -8,7 +8,7 @@ debounce 的适用场景和所解决的问题在这里就不介绍了，如果�
 
 [codesandbox demo](https://codesandbox.io/s/fc-debounce-rkz87)
 
-先来看个简单的计数类组件，实现的功能就是点击按钮进行+1计数
+先来看个简单的计数类组件，实现的功能就是点击按钮进行+1 计数
 
 ## 例一
 
@@ -45,11 +45,11 @@ class ComponentChild1 extends React.Component {
 
 ### 测试效果
 
-![debounce 生效](../imgs/react-debounce-valid.gif)
+![debounce 生效](/imgs/react-debounce-valid.gif)
 
 ### 分析
 
-不停点击 *+1* 按钮 发现 的确是延迟 一定时间输出一次 log
+不停点击 _+1_ 按钮 发现 的确是延迟 一定时间输出一次 log
 
 ## 例二
 
@@ -94,22 +94,21 @@ class ComponentChild2 extends React.Component {
 
 ### 测试效果
 
-![debounce 失效](../imgs/react-debounce-invalid.gif)
+![debounce 失效](/imgs/react-debounce-invalid.gif)
 
 ### 分析
 
-不停点击 *+1* 按钮 发现 的确是延迟 一定时间输出 log，可是为何输出多次 log 呢？
+不停点击 _+1_ 按钮 发现 的确是延迟 一定时间输出 log，可是为何输出多次 log 呢？
 
-细细比较例一与例二，发现唯一的差别在于 `例二中每隔一段时间修改 state`，这样会导致 render 不停渲染，让我们先回到 事件绑定 `debounce` 函数上，多次 render 会导致生成多个 debounce 函数，而在每一个 render 上 触发的事件，都会执行 1次 事件回调。对于例二，每隔 1s 指定一次 render，生成一次 debounce 函数，导致我们频繁点击按钮发生在 多个 render函数上，也就是会执行多个 事件回调，可以说在一次 render 的点击有 debounce，而跨 render 间的点击就失效了，这一切都源于我们的 debounce 函数没有固定；而对于例一，虽然 count 变化也会导致 render，可是 debounce 函数的生成周期和 render 周期是一致的，但在使用 debounce 时，我们还是尽量把 debounce 函数 固定下来，这样就不必在 render 时重新生成新 function 了。
+细细比较例一与例二，发现唯一的差别在于 `例二中每隔一段时间修改 state`，这样会导致 render 不停渲染，让我们先回到 事件绑定 `debounce` 函数上，多次 render 会导致生成多个 debounce 函数，而在每一个 render 上 触发的事件，都会执行 1 次 事件回调。对于例二，每隔 1s 指定一次 render，生成一次 debounce 函数，导致我们频繁点击按钮发生在 多个 render 函数上，也就是会执行多个 事件回调，可以说在一次 render 的点击有 debounce，而跨 render 间的点击就失效了，这一切都源于我们的 debounce 函数没有固定；而对于例一，虽然 count 变化也会导致 render，可是 debounce 函数的生成周期和 render 周期是一致的，但在使用 debounce 时，我们还是尽量把 debounce 函数 固定下来，这样就不必在 render 时重新生成新 function 了。
 
 #### 例一示意图
 
-![debounce 生效](../imgs/react-debounce-valid-graph.png)
+![debounce 生效](/imgs/react-debounce-valid-graph.png)
 
 #### 例二示意图
 
-![debounce 失效](../imgs/react-debounce-invalid-graph.png)
-
+![debounce 失效](/imgs/react-debounce-invalid-graph.png)
 
 > 虽然力求言简意赅，可还是没有讲清晰，讲不清楚的应该是自己还是理不清楚，后面仍需精进，不过还是希望本文可以对理解 react 中使用 debounce 有所感悟。
 
