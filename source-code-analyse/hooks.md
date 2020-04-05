@@ -16,23 +16,23 @@
 
 采用 _单链表_ 结构在 _mount_ 函数组件时根据 `hooks` _api_ 的调用顺序进行初始化(详见 _packages/react-reconciler/src/ReactFiberHooks.js_ 中的 _mountWorkInProgressHook_ 函数)
 
-![`hooks` 存储数据结构](/imgs/react-hooks-data-structure.png)
+![`hooks` 存储数据结构](https://raw.githubusercontent.com/doudounannan/Blog/master/imgs/react-hooks-data-structure.png)
 
 其中 _memoizedState_ 字段存储 _state_ 值(`useState`)，或者 _effect_ 相关信息(`useEffect`)；_next_ 指向下一个 `hooks` 节点；_queue_ 在 `useState` 下存储 _dispatch_ 函数和 `fiber` 队列。
 
 ### `fiber` 节点存储类型
 
-![`fiber` 节点存储类型](/imgs/react-fiber-type.png)
+![`fiber` 节点存储类型](https://raw.githubusercontent.com/doudounannan/Blog/master/imgs/react-fiber-type.png)
 
 `hooks` 相关数据存储在 _fiber_ 节点下的 _memoizedState_ 字段下。
 
 ### `useState` 节点存储类型
 
-![`useState` 节点存储类型](/imgs/react-hooks-useState-structure.png)
+![`useState` 节点存储类型](https://raw.githubusercontent.com/doudounannan/Blog/master/imgs/react-hooks-useState-structure.png)
 
 ### `useEffect` 节点存储类型
 
-![`useEffect` 节点存储类型](/imgs/react-hooks-useEffect-structure.png)
+![`useEffect` 节点存储类型](https://raw.githubusercontent.com/doudounannan/Blog/master/imgs/react-hooks-useEffect-structure.png)
 
 ## 阶段
 
