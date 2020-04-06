@@ -1,4 +1,4 @@
-# React hooks 源码分析
+# 【源码】React hooks 分析
 
 昨天 [司徒正美](https://twitter.com/jslouvre) 过世，据传病因为颈椎病，本人无处证实其真实病因。说是屌丝逆袭的典范，虽早已脱离穷的状态，仍然与人合租，生活简朴，一件冬衣穿多年，关心社会，具有责任感。R.I.P.愿大家都能珍惜当下，积极乐观生活，不留遗憾。
 
@@ -81,7 +81,7 @@ class Event {
 const event = new Event("simulation");
 
 const currentFiberNode = {
-  memoizedState: null
+  memoizedState: null,
 };
 
 let currentHook = null;
@@ -91,7 +91,7 @@ let hasMounted = false;
 function mountState() {
   const hooks = {
     next: null,
-    dispatch: null
+    dispatch: null,
   };
 
   if (currentHook) {
@@ -107,7 +107,7 @@ function mountState() {
 
 function updateState() {
   const hooks = {
-    ...currentHook
+    ...currentHook,
   };
 
   currentHook = currentHook.next;
@@ -123,7 +123,7 @@ function mountUseState(state) {
   const hooks = mountState();
 
   hooks.memoizedState = state;
-  hooks.dispatch = action => {
+  hooks.dispatch = (action) => {
     if (typeof action === "function") {
       hooks.memoizedState = action(hooks.memoizedState);
     } else {
@@ -164,7 +164,7 @@ function FC() {
 
   event.onOne("update-count", function updateCount() {
     console.log("debug-after-update-count");
-    setCount(count => count + 1);
+    setCount((count) => count + 1);
     FC();
   });
 
@@ -208,7 +208,7 @@ event.emit("update-isHappy");
 var count1 = 0;
 var count2 = 0;
 
-var expansiveComputeVariable = (function() {
+var expansiveComputeVariable = (function () {
   count1++;
   console.log("debug-expansiveComputeVariable-call");
 
